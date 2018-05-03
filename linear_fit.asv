@@ -7,16 +7,16 @@ n = length(y);
 S = [x; ones(1, n)];
 A = S*S';
 B = S*y';
-C = A\B;
+C = A\B
 
 syms t
-func = C(1)*t+C(2);
-disp(func)
+func = C(1)*t+C(2)
 
 % plot the points and the polynomial obtained
 plot(x, y, '*');
 hold on;
-fplot(matlabFunction(func), [x(1) x(end)]);
-legend('Data Points','Linear Fit', 'Location' , 'best')
+func = matlabFunction(func);
+fplot(func, [x(1) x(end)]);
+legend('Data Points','Interpolatin Function', 'Location' , 'best')
 end
 
