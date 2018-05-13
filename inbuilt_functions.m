@@ -2,7 +2,8 @@
 disp('yo');
 % use the Run-Section option to run a specific section of the code
 
-%% ODE45 : not so important, used only in stiff equations
+%% ODE45 : not so important, used only in non-stiff differential equations
+% uses the runge-kutta method to get the value at given points
 func = @(x,y) -(y*exp(x)+2*exp(x)+y^2)/(exp(x)+2*x*y);
 y0=6;
 xspan=[0.2 0.4 0.6 0.8];
