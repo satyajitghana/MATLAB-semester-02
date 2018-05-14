@@ -31,7 +31,7 @@ disp(polynomial);
 plot(x, y, '*');
 hold on;
 func = matlabFunction(polynomial);
-fplot(func, [x(1) x(end)]);
+fplot(func, [min(x) max(x)]);
 legend('Data Points','Interpolatin Function', 'Location' , 'best')
 end
 

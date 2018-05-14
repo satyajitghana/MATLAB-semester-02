@@ -20,7 +20,7 @@ disp('The Polynomial is : ')
 disp(poly);
 plot(x, y, '*');
 hold on;
-fplot(poly, [x(1) x(end)]);
+fplot(poly, [min(x) max(x)]);
 legend('Data Points', 'Polynomial');
 
 end

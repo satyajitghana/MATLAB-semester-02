@@ -16,7 +16,7 @@ disp(vpa(func,4))
 % plot the points and the polynomial obtained
 plot(x, y, '*');
 hold on;
-fplot(matlabFunction(func), [x(1) x(end)]);
+fplot(matlabFunction(func), [min(x) max(x)]);
 legend('Data Points','Exponential Fit', 'Location' , 'best')
 end
 

@@ -22,7 +22,7 @@ disp(polynomial)
 % plot the points and the polynomial obtained
 plot(x, y, '*');
 hold on;
-fplot(matlabFunction(polynomial), [x(1) x(end)]);
+fplot(matlabFunction(polynomial), [min(x) max(x)]);
 legend('Data Points', 'Interpolating Polynomial', 'Location', 'Best')
 end
 
